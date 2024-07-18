@@ -78,6 +78,10 @@ section {
   align-items: center;
 }
 
+.home-container {
+  text-align: center;
+}
+
 .home-container h3 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -114,6 +118,7 @@ span {
 .home-container p {
   font-size: 1.6rem;
 }
+
 
 .socila-media-profile a {
   display: inline-flex;
