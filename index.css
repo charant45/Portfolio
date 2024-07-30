@@ -105,6 +105,33 @@ section {
   margin-bottom: 10px; /* Add margin-bottom to create space between h1 elements */
 }
 
+/* Ensure the span and h1 are on the same line */
+h1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.5rem; /* Adjust the font size as needed */
+}
+
+.home h1 span {
+  white-space: nowrap; /* Ensure the text inside the span does not break into the next line */
+}
+
+.typewriter-text {
+  margin-left: 10px;
+  white-space: nowrap; /* Prevent the text from wrapping to a new line */
+}
+
+/* Add this CSS */
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Ensure the container takes the full height of the viewport */
+  text-align: center;
+  margin: 0; /* Remove default margins */
+}
+
 
 span {
   color: var(--main-color);

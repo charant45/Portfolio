@@ -12,8 +12,6 @@
     />
     <link rel="stylesheet" href="index.css" />
     <title>Portfolio - Charan T</title>
-
-
   </head>
   <body>
     <header class="header">
@@ -37,8 +35,8 @@
     />
       <div class="home-container">
         <h3>Hello, I am</h3>
-        <h1>Charan T</h1>
-        <h1>I'm a <span>Full Stack Developer</span></h1>
+        <h1 class="center-text">Charan T</h1>
+        <h1>I'm a <span class="typewriter-text"></span></h1>
         <p>
           Building Bridges Between Front-End and Back-End, Transforming Ideas
           into Web Reality
@@ -391,6 +389,32 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="index.js"></script>
+    <script>
+      const typewriterTexts = [
+        "Web Developer",
+        "UI/UX Designer"
+      ];
+      let textIndex = 0;
+      let charIndex = 0;
+      const typewriterElement = document.querySelector(".typewriter-text");
+
+      function typeWriter() {
+        if (charIndex < typewriterTexts[textIndex].length) {
+          typewriterElement.innerHTML += typewriterTexts[textIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 150);
+        } else {
+          setTimeout(() => {
+            typewriterElement.innerHTML = "";
+            charIndex = 0;
+            textIndex = (textIndex + 1) % typewriterTexts.length;
+            typeWriter();
+          }, 2000);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", typeWriter);
+    </script>
   </body>
 </html>
 
